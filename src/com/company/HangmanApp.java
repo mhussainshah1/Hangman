@@ -2,24 +2,19 @@ package com.company;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import java.util.Scanner;
 
-public class Main {
-
+public class HangmanApp {
     public static void main(String[] args) {
-        ArrayList<String> words = new ArrayList<>();
-        Collections.addAll(words, "arraylist","tree", "rain", "bear", "encourage", "promise", "soup", "chess", "insurance",
-                "pancakes", "stream");
-        int index = getRandom(0, words.size());
-        String word = words.get(index);
+        Hangman h = new Hangman();
+        DatabaseWord db = new DatabaseWord();
+        String word = db. getWord();
 
         System.out.println("Welcome, let's play hangman!");
         System.out.print("Here is the word I am thinking of: ");
 
-        StringBuilder answer = new StringBuilder();
-        for (int i = 0; i < word.length(); i++) {
-            answer.append("-");
-        }
+        StringBuilder answer = h. getQuestion();
         System.out.print(answer);
         System.out.println();
 
@@ -29,18 +24,10 @@ public class Main {
         for (int i = 1; i < 7; ) {
             System.out.print("\nEnter your guess: ");
             guess = keyboard.next();
+            h.setGuess(guess);
 
-            if (word.contains(guess)) {
-                int start = 0, end = 0;
-                while (true){
-                    start = word.indexOf(guess, end); //inclusive
-                    if(start == -1){
-                        break;
-                    }
-                    end = start + guess.length(); //exclusive
-                    //System.out.println(start + " " + end + " " +guess + " = " + answer);
-                    answer.replace(start, end, guess);
-                }
+            if (word.contains(h.getGuess())) {
+                answer = h.getReplacedString();
                 System.out.println("Your guess so far:" + answer);
                 if (answer.indexOf("-") == -1) {
                     System.out.println("\nYou've won! The word was " + answer);
@@ -58,8 +45,5 @@ public class Main {
         System.out.println("\nThank you for playing!");
     }
 
-    public static int getRandom(int min, int max) {
-        int index = min + (int) (Math.random() * max);
-        return index;
-    }
+
 }
