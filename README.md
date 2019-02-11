@@ -1,4 +1,4 @@
-###Simple Hangman
+### Simple Hangman
 You are going to write a word guessing game app in Java. This game is a simpler version of Hangman.
 
 **Requirements:**
