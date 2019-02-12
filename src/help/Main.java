@@ -1,4 +1,4 @@
-package com.company;
+package help;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -8,7 +8,7 @@ public class Main {
 
     public static void main(String[] args) {
         ArrayList<String> words = new ArrayList<>();
-        Collections.addAll(words, "arraylist","tree", "rain", "bear", "encourage", "promise", "soup", "chess", "insurance",
+        Collections.addAll(words, "arraylist", "tree", "rain", "bear", "encourage", "promise", "soup", "chess", "insurance",
                 "pancakes", "stream");
         int index = getRandom(0, words.size());
         String word = words.get(index);
@@ -25,20 +25,24 @@ public class Main {
 
         Scanner keyboard = new Scanner(System.in);
         String guess;
-
+        int lifeLine = 0;
         for (int i = 1; i < 7; ) {
-            System.out.print("\nEnter your guess: ");
+            System.out.print("\nEnter your guess or ($) for life line: ");
             guess = keyboard.next();
 
-            if (word.contains(guess)) {
+            if (word.contains(guess) || guess.equals("$")) {
+                if (guess.equals("$")) {
+                    index = answer.indexOf("-");
+                    guess = Character.toString(word.charAt(index));
+                }
+
                 int start = 0, end = 0;
-                while (true){
+                while (true) {
                     start = word.indexOf(guess, end); //inclusive
-                    if(start == -1){
+                    if (start == -1) {
                         break;
                     }
                     end = start + guess.length(); //exclusive
-                    //System.out.println(start + " " + end + " " +guess + " = " + answer);
                     answer.replace(start, end, guess);
                 }
                 System.out.println("Your guess so far:" + answer);

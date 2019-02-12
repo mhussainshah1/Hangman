@@ -1,25 +1,50 @@
 package com.company;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
 public class DatabaseWord {
-    private int randomNumber; //readable property
     private String word;
-    private String guess;
-    private StringBuilder answer;
     private List<String> words;
 
-    public DatabaseWord(){
-        words = new ArrayList<>();
-        Collections.addAll(words, "arraylist","tree", "rain", "bear", "encourage", "promise", "soup", "chess", "insurance",
-                "pancakes", "stream");
+    public DatabaseWord() {
+//        words = new ArrayList<>();
+//        Collections.addAll(words, "arraylist", "tree", "rain", "bear", "encourage", "promise", "soup", "chess", "insurance",
+//                "pancakes", "stream");
+
+        String filename = (System.getProperty("user.dir") + File.separatorChar + "google-10000-english.txt");
+        File file = new File(filename);
+        if (file.exists()) {
+            try {
+                words = readLines(file);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        //System.out.println(words.size());
     }
 
-    private int getRandomNumber(int min, int max) {
-        randomNumber = min + (int) (Math.random() * max);
-        return randomNumber;
+    public static List<String> readLines(File file) throws IOException {
+        BufferedReader reader = new BufferedReader(new FileReader(file));
+        List<String> results = new ArrayList<String>();
+        String line = reader.readLine();
+        while (line != null) {
+            if (line.length() > 6) {
+                results.add(line);
+            }
+            line = reader.readLine();
+        }
+        reader.close();
+        return results;
+    }
+
+    public String getWord() {
+        return word;
     }
 
     public void setWord(String word) {
@@ -27,49 +52,17 @@ public class DatabaseWord {
         this.word = word;
     }
 
-    public String getWord(){
-        int index = getRandomNumber(0, words.size());
+    public String getWordAt(int index) {
         word = words.get(index);
         return word;
-    }
-
-    public void setGuess(String guess) {
-        this.guess = guess;
-    }
-
-    public String getGuess() {
-        return guess;
-    }
-
-    public void setAnswer(StringBuilder answer) {
-        this.answer = answer;
-    }
-
-    public String getAnswer() {
-        int start = 0, end = 0;
-        while (true){
-            start = word.indexOf(guess, end); //inclusive
-            if(start == -1){
-                break;
-            }
-            end = start + guess.length(); //exclusive
-            answer.replace(start, end, guess);
-        }
-        return answer.toString();
-    }
-
-    public void setWords(List<String> words) {
-        this.words = words;
     }
 
     public List<String> getWords() {
         return words;
     }
 
-    public String getLetterSpaces(){
-        for (int i = 0; i < word.length(); i++) {
-            answer.append("-");
-        }
-        return answer.toString();
+    public void setWords(List<String> words) {
+        this.words = words;
     }
+
 }

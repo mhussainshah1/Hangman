@@ -3,26 +3,25 @@ You are going to write a word guessing game app in Java. This game is a simpler 
 
 **Requirements:**
 
-Initialize your array list with the following words: 
-* tree
-* rain
-* bear
-* encourage
-* promise
-* soup
-* chess
-* insurance
-* pancakes
-* stream
-- When you run the application, randomly choose a word from that list for the user to guess.
-- For each letter the user guesses wrong, let them know along with how many wrong guesses they have left.
-- The user is allowed up to 5 wrong guesses. On the 6th wrong guess, they lose the game.
-- If the user guesses correctly, output the word with the letters they have guessed correctly so far and blanks for letters they have not guessed yet.
-- The user can input either a letter or a word for their guess.
-- If the user guesses the word correctly, output "You've won!" and end the game.
+* Initialize your array list with the following words: 
+    * tree
+    * rain
+    * bear
+    * encourage
+    * promise
+    * soup
+    * chess
+    * insurance
+    * pancakes
+    * stream
+* When you run the application, randomly choose a word from that list for the user to guess.
+* For each letter the user guesses wrong, let them know along with how many wrong guesses they have left.
+* The user is allowed up to 5 wrong guesses. On the 6th wrong guess, they lose the game.
+* If the user guesses correctly, output the word with the letters they have guessed correctly so far and blanks for letters they have not guessed yet.
+* The user can input either a letter or a word for their guess.
+* If the user guesses the word correctly, output "You've won!" and end the game.
 
 Sample output:
-
 ```
 Welcome, let's play hangman!
 
@@ -82,3 +81,11 @@ Sorry, you have no more guesses left. The word was rain.
 
 Thank you for playing!
 ```
+
+download the following word list [https://raw.githubusercontent.com/first20hours/google-10000-english/master/google-10000-english.txt]
+
+use the program "Read Arraylist of Words" to learn how to load the above word list into an arraylist or array in your program.
+
+[https://github.com/dave45678/ReadListOfBooks/blob/master/ReadListOfBooksApp/src/ReadListOfBooks.java]
+
+Note: Only read in words that have 7 or more characters. If the user want to give up then he can get lifeline, which is one character

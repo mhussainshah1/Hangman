@@ -1,47 +1,51 @@
 package com.company;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
 import java.util.Scanner;
 
 public class HangmanApp {
     public static void main(String[] args) {
+        welcome();
+        process();
+        exit();
+    }
 
+    public static void welcome() {
         System.out.println("Welcome, let's play hangman!");
         System.out.print("Here is the word I am thinking of: ");
+    }
 
-        //Hangman h = new Hangman();
-        DatabaseWord db = new DatabaseWord();
-        String word = db. getWord();
+    public static void process() {
 
-        String answer = db. getLetterSpaces();
-        System.out.print(answer);
+        Hangman game = new Hangman();
+        String word = game.getWord();
+        System.out.print(game.getBlanks());
         System.out.println();
 
         Scanner keyboard = new Scanner(System.in);
-        for (int i = 1; i < 7; ) {
-            System.out.print("\nEnter your guess: ");
-            db.setGuess(keyboard.next());
 
-            if (word.contains(db.getGuess())) {
-                answer = db.getAnswer();
-                System.out.println("Your guess so far:" + answer);
-                if (answer.indexOf("-") == -1) {
-                    System.out.println("\nYou've won! The word was " + answer);
+        int i = 1;
+        while (i < 7) {
+            System.out.print("\nEnter your guess or $ for Lifeline: ");
+            game.setGuess(keyboard.next());
+
+            if (word.contains(game.getGuess()) || game.getGuess().equals("$")) {
+                System.out.println(game.playGame());
+                if (game.getBuilder().indexOf("-") == -1) {
+                    System.out.println(game.wonGame());
                     break;
                 }
             } else {
                 System.out.println("You have guessed incorrectly " + i + "/6 times.");
-                System.out.println("Your guess so far:" + answer);
+                System.out.println(game.getStatus());
                 if (i == 6) {
-                    System.out.println("\nSorry, you have no more guesses left. The word was " + word);
+                    System.out.println(game.looseGame());
                 }
                 i++;
             }
         }
-        System.out.println("\nThank you for playing!");
     }
 
-
+    public static void exit() {
+        System.out.println("\nThank you for playing!");
+    }
 }
