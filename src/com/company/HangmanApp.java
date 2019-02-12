@@ -13,21 +13,19 @@ public class HangmanApp {
 
         //Hangman h = new Hangman();
         DatabaseWord db = new DatabaseWord();
-        String word = db. getRandomWord();
+        String word = db. getWord();
 
-        StringBuilder answer = db. getQuestion();
+        String answer = db. getLetterSpaces();
         System.out.print(answer);
         System.out.println();
 
         Scanner keyboard = new Scanner(System.in);
-        String guess;
-
         for (int i = 1; i < 7; ) {
             System.out.print("\nEnter your guess: ");
             db.setGuess(keyboard.next());
 
             if (word.contains(db.getGuess())) {
-                answer = db.getReplacedString();
+                answer = db.getAnswer();
                 System.out.println("Your guess so far:" + answer);
                 if (answer.indexOf("-") == -1) {
                     System.out.println("\nYou've won! The word was " + answer);

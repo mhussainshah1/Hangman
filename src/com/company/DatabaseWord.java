@@ -5,11 +5,11 @@ import java.util.Collections;
 import java.util.List;
 
 public class DatabaseWord {
+    private int randomNumber; //readable property
     private String word;
-    private List<String> words;
-    private int randomNumber;
     private String guess;
     private StringBuilder answer;
+    private List<String> words;
 
     public DatabaseWord(){
         words = new ArrayList<>();
@@ -17,30 +17,35 @@ public class DatabaseWord {
                 "pancakes", "stream");
     }
 
-    public String getRandomWord(){
-        int index = getRandomNumber(0, words.size());
-        word = words.get(index);
-        return word;
-    }
-    public void setWord(String word) {
-        words.add(word);
-        this.word = word;
-    }
-
-    public List<String> getWords() {
-        return words;
-    }
-
-    public void setWords(List<String> words) {
-        this.words = words;
-    }
-
     private int getRandomNumber(int min, int max) {
         randomNumber = min + (int) (Math.random() * max);
         return randomNumber;
     }
 
-    public StringBuilder getReplacedString() {
+    public void setWord(String word) {
+        words.add(word);
+        this.word = word;
+    }
+
+    public String getWord(){
+        int index = getRandomNumber(0, words.size());
+        word = words.get(index);
+        return word;
+    }
+
+    public void setGuess(String guess) {
+        this.guess = guess;
+    }
+
+    public String getGuess() {
+        return guess;
+    }
+
+    public void setAnswer(StringBuilder answer) {
+        this.answer = answer;
+    }
+
+    public String getAnswer() {
         int start = 0, end = 0;
         while (true){
             start = word.indexOf(guess, end); //inclusive
@@ -50,25 +55,21 @@ public class DatabaseWord {
             end = start + guess.length(); //exclusive
             answer.replace(start, end, guess);
         }
-        return answer;
+        return answer.toString();
     }
 
-    public StringBuilder getQuestion(){
+    public void setWords(List<String> words) {
+        this.words = words;
+    }
+
+    public List<String> getWords() {
+        return words;
+    }
+
+    public String getLetterSpaces(){
         for (int i = 0; i < word.length(); i++) {
             answer.append("-");
         }
-        return answer;
-    }
-
-    public String getGuess() {
-        return guess;
-    }
-
-    public void setGuess(String guess) {
-        this.guess = guess;
-    }
-
-    public void setAnswer(StringBuilder answer) {
-        this.answer = answer;
+        return answer.toString();
     }
 }
