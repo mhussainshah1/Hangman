@@ -7,14 +7,15 @@ import java.util.Scanner;
 
 public class HangmanApp {
     public static void main(String[] args) {
-        Hangman h = new Hangman();
-        DatabaseWord db = new DatabaseWord();
-        String word = db. getWord();
 
         System.out.println("Welcome, let's play hangman!");
         System.out.print("Here is the word I am thinking of: ");
 
-        StringBuilder answer = h. getQuestion();
+        //Hangman h = new Hangman();
+        DatabaseWord db = new DatabaseWord();
+        String word = db. getRandomWord();
+
+        StringBuilder answer = db. getQuestion();
         System.out.print(answer);
         System.out.println();
 
@@ -23,11 +24,10 @@ public class HangmanApp {
 
         for (int i = 1; i < 7; ) {
             System.out.print("\nEnter your guess: ");
-            guess = keyboard.next();
-            h.setGuess(guess);
+            db.setGuess(keyboard.next());
 
-            if (word.contains(h.getGuess())) {
-                answer = h.getReplacedString();
+            if (word.contains(db.getGuess())) {
+                answer = db.getReplacedString();
                 System.out.println("Your guess so far:" + answer);
                 if (answer.indexOf("-") == -1) {
                     System.out.println("\nYou've won! The word was " + answer);
