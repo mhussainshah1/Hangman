@@ -5,16 +5,19 @@ public class Hangman {
     private String word;
     private StringBuilder builder;
     private DatabaseWord databaseWord;
-    private Randomize r;
+    private Randomize random;
+
+    //constructor
     Hangman(){
         databaseWord = new DatabaseWord();
         builder = new StringBuilder();
-        r = new Randomize();
+        random = new Randomize();
 
-        int index = r.getRandomNumber(0, databaseWord.getWords().size());
+        int index = random.getRandomNumber(0, databaseWord.getWords().size());
         word = databaseWord.getWordAt(index);
     }
 
+    //getter and setters
     public void setGuess(String guess) {
         this.guess = guess;
     }

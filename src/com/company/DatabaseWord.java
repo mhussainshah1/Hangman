@@ -5,7 +5,6 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public class DatabaseWord {
@@ -13,10 +12,6 @@ public class DatabaseWord {
     private List<String> words;
 
     public DatabaseWord() {
-//        words = new ArrayList<>();
-//        Collections.addAll(words, "arraylist", "tree", "rain", "bear", "encourage", "promise", "soup", "chess", "insurance",
-//                "pancakes", "stream");
-
         String filename = (System.getProperty("user.dir") + File.separatorChar + "google-10000-english.txt");
         File file = new File(filename);
         if (file.exists()) {
@@ -26,7 +21,6 @@ public class DatabaseWord {
                 e.printStackTrace();
             }
         }
-        //System.out.println(words.size());
     }
 
     public static List<String> readLines(File file) throws IOException {
