@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="723ac703-747f-405e-8918-60e70a3118e9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/com/company/DatabaseWord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/DatabaseWord.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Hangman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Hangman.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -13,12 +12,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/help/Main.java">
+        <entry file="file://$PROJECT_DIR$/src/com/company/DatabaseWord.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="355">
-              <caret line="41" column="38" lean-forward="true" selection-start-line="41" selection-start-column="38" selection-end-line="41" selection-end-column="38" />
+            <state relative-caret-position="361">
+              <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -27,76 +26,25 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/company.uml">
-          <provider selected="true" editor-type-id="UmlEditorProvider">
-            <state>
-              <ID>JAVA</ID>
-              <OriginalElement>com.company</OriginalElement>
-              <nodes>
-                <node x="164.125" y="578.0">com.company.HangmanApp</node>
-                <node x="128.125" y="229.0">com.company.Hangman</node>
-                <node x="263.0" y="0.0">com.company.DatabaseWord</node>
-                <node x="0.0" y="49.0">com.company.Randomize</node>
-              </nodes>
-              <notes />
-              <edges>
-                <edge source="com.company.HangmanApp" target="com.company.Hangman">
-                  <point x="-43.25" y="-64.0" />
-                  <point x="207.375" y="553.0" />
-                  <point x="189.375" y="553.0" />
-                  <point x="-61.25" y="149.5" />
-                </edge>
-                <edge source="com.company.Hangman" target="com.company.Randomize">
-                  <point x="-91.875" y="-149.5" />
-                  <point x="158.75" y="204.0" />
-                  <point x="60.75" y="204.0" />
-                  <point x="-60.75" y="40.5" />
-                </edge>
-                <edge source="com.company.Hangman" target="com.company.DatabaseWord">
-                  <point x="30.625" y="-149.5" />
-                  <point x="281.25" y="204.0" />
-                  <point x="319.0" y="204.0" />
-                  <point x="-56.0" y="89.5" />
-                </edge>
-              </edges>
-              <settings layout="Hierarchic Group" zoom="1.0" x="-268.0" y="174.0" />
-              <SelectedNodes>
-                <node>com.company.Randomize</node>
-              </SelectedNodes>
-              <Categories>
-                <Category>Fields</Category>
-                <Category>Constructors</Category>
-                <Category>Methods</Category>
-                <Category>Properties</Category>
-                <Category>Inner Classes</Category>
-              </Categories>
-              <SCOPE>All</SCOPE>
-              <VISIBILITY>private</VISIBILITY>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/DatabaseWord.java">
+        <entry file="file://$PROJECT_DIR$/src/com/company/Hangman.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="21" column="13" lean-forward="true" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+            <state relative-caret-position="720">
+              <caret line="48" column="14" selection-start-line="48" selection-start-column="14" selection-end-line="48" selection-end-column="14" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1751#1752#0" expanded="true" />
-                <element signature="e#1785#1786#0" expanded="true" />
+                <element signature="method#getBlanks#0;class#Hangman#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/company/Hangman.java">
+        <entry file="file://$PROJECT_DIR$/src/com/company/HangmanApp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
+            <state relative-caret-position="360">
+              <caret line="33" column="50" lean-forward="true" selection-start-line="33" selection-start-column="50" selection-end-line="33" selection-end-column="50" />
               <folding>
-                <element signature="method#getBlanks#0;class#Hangman#0" />
+                <element signature="e#1392#1393#0" expanded="true" />
+                <element signature="e#1454#1455#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -153,7 +101,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -172,17 +120,11 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="company" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Hangman" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Hangman" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="help" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -212,7 +154,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.HangmanApp">
     <configuration name="DatabaseWord" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.company.DatabaseWord" />
       <module name="Hangman" />
@@ -264,8 +206,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
         <item itemvalue="Application.HangmanApp" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.DatabaseWord" />
         <item itemvalue="Application.ReadListOfBooks" />
       </list>
@@ -287,13 +229,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45184000" />
+    <option name="totallyTimeSpent" value="45601000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1988273" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22186235" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -310,7 +252,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" auto_hide="true" id="Terminal" order="9" weight="0.32997763" />
+      <window_info anchor="bottom" auto_hide="true" id="Terminal" order="9" weight="0.45112783" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="11" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
@@ -365,24 +307,17 @@
           </nodes>
           <notes />
           <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="230.5" y="283.0" />
+          <settings layout="Hierarchic Group" zoom="1.0" x="231.0" y="283.0" />
           <SelectedNodes />
           <Categories>
-            <Category>Properties</Category>
-            <Category>Methods</Category>
-            <Category>Constructors</Category>
-            <Category>Inner Classes</Category>
             <Category>Fields</Category>
+            <Category>Constructors</Category>
+            <Category>Methods</Category>
+            <Category>Properties</Category>
+            <Category>Inner Classes</Category>
           </Categories>
           <SCOPE>All</SCOPE>
           <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Randomize.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -393,16 +328,6 @@
             <caret line="84" column="33" selection-start-line="84" selection-start-column="33" selection-end-line="84" selection-end-column="33" />
           </first_editor>
           <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/HangmanApp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="31" column="49" selection-start-line="31" selection-start-column="35" selection-end-line="31" selection-end-column="49" />
-          <folding>
-            <element signature="e#1454#1455#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -422,33 +347,14 @@
           <ID>JAVA</ID>
           <OriginalElement>com.company</OriginalElement>
           <nodes>
-            <node x="164.125" y="578.0">com.company.HangmanApp</node>
-            <node x="128.125" y="229.0">com.company.Hangman</node>
-            <node x="263.0" y="0.0">com.company.DatabaseWord</node>
-            <node x="0.0" y="49.0">com.company.Randomize</node>
+            <node x="0.0" y="356.0">com.company.HangmanApp</node>
+            <node x="0.0" y="0.0">com.company.Hangman</node>
+            <node x="288.0" y="0.0">com.company.DatabaseWord</node>
+            <node x="221.0" y="356.0">com.company.Randomize</node>
           </nodes>
           <notes />
-          <edges>
-            <edge source="com.company.HangmanApp" target="com.company.Hangman">
-              <point x="-43.25" y="-64.0" />
-              <point x="207.375" y="553.0" />
-              <point x="189.375" y="553.0" />
-              <point x="-61.25" y="149.5" />
-            </edge>
-            <edge source="com.company.Hangman" target="com.company.Randomize">
-              <point x="-91.875" y="-149.5" />
-              <point x="158.75" y="204.0" />
-              <point x="60.75" y="204.0" />
-              <point x="-60.75" y="40.5" />
-            </edge>
-            <edge source="com.company.Hangman" target="com.company.DatabaseWord">
-              <point x="30.625" y="-149.5" />
-              <point x="281.25" y="204.0" />
-              <point x="319.0" y="204.0" />
-              <point x="-56.0" y="89.5" />
-            </edge>
-          </edges>
-          <settings layout="Hierarchic Group" zoom="1.0" x="-268.0" y="174.0" />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.6497948016415869" x="244.0" y="355.5" />
           <SelectedNodes>
             <node>com.company.Randomize</node>
           </SelectedNodes>
@@ -464,24 +370,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Randomize.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/DatabaseWord.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="21" column="13" lean-forward="true" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+        <state relative-caret-position="361">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1751#1752#0" expanded="true" />
-            <element signature="e#1785#1786#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Hangman.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
+        <state relative-caret-position="720">
+          <caret line="48" column="14" selection-start-line="48" selection-start-column="14" selection-end-line="48" selection-end-column="14" />
           <folding>
             <element signature="method#getBlanks#0;class#Hangman#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/HangmanApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="33" column="50" lean-forward="true" selection-start-line="33" selection-start-column="50" selection-end-line="33" selection-end-column="50" />
+          <folding>
+            <element signature="e#1392#1393#0" expanded="true" />
+            <element signature="e#1454#1455#0" expanded="true" />
           </folding>
         </state>
       </provider>

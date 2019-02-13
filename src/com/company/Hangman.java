@@ -8,7 +8,7 @@ public class Hangman {
     private Randomize random;
 
     //constructor
-    Hangman(){
+    public Hangman(){
         databaseWord = new DatabaseWord();
         builder = new StringBuilder();
         random = new Randomize();
