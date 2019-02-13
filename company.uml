@@ -3,35 +3,35 @@
   <ID>JAVA</ID>
   <OriginalElement>com.company</OriginalElement>
   <nodes>
-    <node x="164.125" y="578.0">com.company.HangmanApp</node>
-    <node x="128.125" y="229.0">com.company.Hangman</node>
-    <node x="263.0" y="0.0">com.company.DatabaseWord</node>
-    <node x="0.0" y="49.0">com.company.Randomize</node>
+    <node x="149.625" y="597.0">com.company.HangmanApp</node>
+    <node x="0.0" y="0.0">com.company.DatabaseWord</node>
+    <node x="116.125" y="236.0">com.company.Game</node>
+    <node x="245.0" y="51.0">com.company.Randomize</node>
   </nodes>
   <notes />
   <edges>
-    <edge source="com.company.Hangman" target="com.company.Randomize">
-      <point x="-91.875" y="-149.5" />
-      <point x="158.75" y="204.0" />
-      <point x="60.75" y="204.0" />
-      <point x="-60.75" y="40.5" />
+    <edge source="com.company.HangmanApp" target="com.company.Game">
+      <point x="44.0" y="-66.5" />
+      <point x="281.625" y="572.0" />
+      <point x="298.375" y="572.0" />
+      <point x="60.75" y="155.5" />
     </edge>
-    <edge source="com.company.HangmanApp" target="com.company.Hangman">
-      <point x="-43.25" y="-64.0" />
-      <point x="207.375" y="553.0" />
-      <point x="189.375" y="553.0" />
-      <point x="-61.25" y="149.5" />
+    <edge source="com.company.Game" target="com.company.Randomize">
+      <point x="91.125" y="-155.5" />
+      <point x="328.75" y="211.0" />
+      <point x="429.5" y="211.0" />
+      <point x="61.5" y="42.0" />
     </edge>
-    <edge source="com.company.Hangman" target="com.company.DatabaseWord">
-      <point x="30.625" y="-149.5" />
-      <point x="281.25" y="204.0" />
-      <point x="319.0" y="204.0" />
-      <point x="-56.0" y="89.5" />
+    <edge source="com.company.Game" target="com.company.DatabaseWord">
+      <point x="-30.375" y="-155.5" />
+      <point x="207.25" y="211.0" />
+      <point x="168.75" y="211.0" />
+      <point x="56.25" y="93.0" />
     </edge>
   </edges>
-  <settings layout="Hierarchic Group" zoom="1.0" x="257.0" y="140.0" />
+  <settings layout="Hierarchic Group" zoom="1.0" x="120.0" y="94.5" />
   <SelectedNodes>
-    <node>com.company.Randomize</node>
+    <node>com.company.HangmanApp</node>
   </SelectedNodes>
   <Categories>
     <Category>Fields</Category>

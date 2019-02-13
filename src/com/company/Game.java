@@ -1,6 +1,6 @@
 package com.company;
 
-public class Hangman {
+public class Game {
     private String guess;
     private String word;
     private StringBuilder builder;
@@ -8,7 +8,7 @@ public class Hangman {
     private Randomize random;
 
     //constructor
-    public Hangman(){
+    public Game(){
         databaseWord = new DatabaseWord();
         builder = new StringBuilder();
         random = new Randomize();

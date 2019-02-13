@@ -15,8 +15,7 @@ public class HangmanApp {
     }
 
     public static void process() {
-
-        Hangman game = new Hangman();
+        Game game = new Game();
         String word = game.getWord();
         System.out.print(game.getBlanks());
         System.out.println();
